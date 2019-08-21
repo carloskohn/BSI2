@@ -1,0 +1,11 @@
+cadeira
+celular
+chicara
+janela
+gaveta
+sapato
+camida
+chinelo
+bolacha
+pomada
+torrada

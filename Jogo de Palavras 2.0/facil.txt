@@ -1,0 +1,10 @@
+porta
+faca
+mesa
+carro
+copo
+barro
+vidro
+garfo
+faca
+colher
