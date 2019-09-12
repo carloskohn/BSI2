@@ -1,5 +1,4 @@
 # Aluno = CARLOS EDUARDO KOHN
-# Aluno = IGOR RENAN RODRIGUES
 
 # 1) Primeiro, faça uma lista chamada "mantimentos" com os valores "banana", "laranja" e "melao".
 # Defina estes dois dicionários:
@@ -31,6 +30,6 @@ def calcular_conta(lista_de_mantimentos):
             total += precos[item]
             estoque[item] -= 1
 
-    return total
+    print(total)
 
 calcular_conta(lista_de_mantimentos)
