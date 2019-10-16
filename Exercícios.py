@@ -1,39 +1,21 @@
-def encriptar_mensagem():
-    """Troca as vogais de uma linha de um arquivo\
-     de texto por um '*' asterisco."""
 
-    texto = open('mensagem.txt')
-    saida = open('cripto.txt', 'w')
-    for linha in texto.readlines():
-        for letra in linha:
-            if letra in 'aeiou':
-                saida.write('*')
-            else:
-                saida.write(letra)
-    texto.close()
-    saida.close()
-# encriptar_mensagem()
+# Aluno: Carlos Eduardo Kohn
 
-def quantas_alice():
-    """Conta quantas vezes a palavra 'Alice' aparece no texto."""
 
-    arq = open('alice.txt')
-    texto = arq.read()
-    texto = texto.lower()
-    import string
-    for c in string.punctuation:
-        texto = texto.replace(c, '')
-    texto = texto.split()
+import urllib.request
 
-    dic = {}
-    for palavra in texto:
-        if palavra not in dic:
-            dic[palavra] = 1
-        else:
-            dic[palavra] += 1
-    arq.close()
-    return print('Alice aparece %s vezes' %dic['alice'])
+f = urllib.request.urlopen('http://araquari.ifc.edu.br')
+site = str(f.read().decode('utf-8'))
+pesquisa = 'Sistemas de Informação'
 
-quantas_alice()
+if site.find(pesquisa) > -1:
+    arquivo = open('Resultados.txt', 'w')
+    arquivo.write('Hoje tem notícia sobre Sistemas de Informação!')
+    arquivo.close
+else:
+    arquivo = open('Resultados.txt', 'w')
+    arquivo.write('Hoje não tem notícia sobre Sistemas de Informação!')
+    arquivo.close
+
 
 
